@@ -14,24 +14,32 @@ Bot Telegram otomatis untuk memantau statistik akun pengguna dari platform OnPro
 
 ### 1. Clone repo ini
 
+```bash
 git clone https://github.com/akbarabdul80/onprove-check.git
 cd onprover-telegram-bot
+```
 
 ### 2. Install dependencies
 
+```bash
 npm install
+```
 
 ### 3. Buat file .env
 
 Buat file `.env` di root folder dengan isi sebagai berikut:
 
+```bash
 TELEGRAM_TOKEN=isi_dengan_token_bot_telegrammu
 TELEGRAM_CHAT_ID=isi_dengan_chat_id_telegrammu
 BEARER_TOKEN=isi_dengan_bearer_token_OnProver
+```
 
 ### 4. Jalankan bot
 
+```bash
 node index.js
+```
 
 ## Struktur File
 
