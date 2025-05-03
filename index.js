@@ -105,9 +105,13 @@ schedule.scheduleJob('*/30 * * * *', async () => {
 });
 
 // Jadwal: Reminder daily checkin jam 1 siang (WIB = UTC+7)
-schedule.scheduleJob('0 6 * * *', { timezone: 'Asia/Jakarta' }, async () => {
-  await sendTelegramMessage('🌞 *Reminder:* Waktunya daily check-in di OnProver! 🚀');
-});
+schedule.scheduleJob(
+  { rule: '0 6 * * *', tz: 'Asia/Jakarta' },
+  async () => {
+    await sendTelegramMessage('🌞 *Reminder:* Waktunya daily check-in di OnProver! 🚀');
+  }
+);
+
 
 // Listen Command /check
 bot.onText(/\/check/, async (msg) => {
